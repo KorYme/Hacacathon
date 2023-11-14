@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class CursorFollower : MonoBehaviour
 {
-    [SerializeField] Transform _lightTransform;
-
     private IEnumerator Start()
     {
-
+        Camera main = Camera.main;
         while (Application.isPlaying)
         {
             Debug.Log(Input.mousePosition);
-            _lightTransform.position = Input.mousePosition;
+            transform.position = ((Vector2)main.ScreenToWorldPoint(Input.mousePosition));
             yield return null;
         }
     }
