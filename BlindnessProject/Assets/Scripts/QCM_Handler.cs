@@ -45,8 +45,9 @@ public class QCM_Handler : MonoBehaviour
         _numberOfAnswer = transform.childCount - 1;
         foreach (var question in _answersText)
         {
-            question.fontSize = _initialFontSize + _currentFontDelta;
+            question.fontSize = _initialFontSize;
         }
+        _questionText.fontSize = _initialFontSize;
         RemoveAllQuestions();
     }
 
@@ -107,7 +108,7 @@ public class QCM_Handler : MonoBehaviour
 
     private void ChangeFontSize(bool isIncreasing)
     {
-        _currentFontDelta = Mathf.Clamp(_currentFontDelta + _sizeModifier * (isIncreasing ? 1 : -1), _sizeClamp.x, _sizeClamp.y);
+        _currentFontDelta = Mathf.Clamp(_currentFontDelta + _sizeModifier * (isIncreasing ? 1 : -1), _sizeClamp.x - _initialFontSize, _sizeClamp.y - _initialFontSize);
         foreach (TMP_Text answer in _answersText)
         {
             answer.fontSize = _initialFontSize + _currentFontDelta;
