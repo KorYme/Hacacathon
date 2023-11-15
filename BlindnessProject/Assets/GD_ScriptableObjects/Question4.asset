@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19348cd06140e8a4382f1f3fe4e41ea0, type: 3}
+  m_Name: Question4
+  m_EditorClassIdentifier: 
+  question: "Quelle est l'amende maximale encourue pour non-respect des normes d'accessibilit\xE9
+    num\xE9rique ?"
+  answers:
+  - IsTheGoodAnswer: 1
+    AnswerData: "A : 20 000\u20AC/an (tant que le manquement \xE0 la loi n'est pas
+      corrig\xE9)"
+  - IsTheGoodAnswer: 0
+    AnswerData: "B : 35 000\u20AC"
+  - IsTheGoodAnswer: 0
+    AnswerData: "C : 7000\u20AC/an (tant que le manquement \xE0 la loi n'est pas
+      corrig\xE9)"
