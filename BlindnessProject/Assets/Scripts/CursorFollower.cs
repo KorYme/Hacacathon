@@ -9,7 +9,6 @@ public class CursorFollower : MonoBehaviour
         Camera main = Camera.main;
         while (Application.isPlaying)
         {
-            Debug.Log(Input.mousePosition);
             transform.position = ((Vector2)main.ScreenToWorldPoint(Input.mousePosition));
             yield return null;
         }

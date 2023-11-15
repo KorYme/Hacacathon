@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19348cd06140e8a4382f1f3fe4e41ea0, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: 
-  _question: 
-  _answers:
+  question: "Quelle est la r\xE9ponse ?"
+  answers:
   - IsTheGoodAnswer: 0
-    AnswerData: 
+    AnswerData: "La A\t"
   - IsTheGoodAnswer: 0
-    AnswerData: 
+    AnswerData: "La r\xE9ponde num\xE9ro 2 ?"
+  - IsTheGoodAnswer: 0
+    AnswerData: Lala PO
+  - IsTheGoodAnswer: 1
+    AnswerData: "La r\xE9ponse D"

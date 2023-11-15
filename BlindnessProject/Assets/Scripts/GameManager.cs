@@ -5,24 +5,17 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] UnityEvent _onStart;
-    [SerializeField] float _startingFontSize;
-    [SerializeField] UnityEvent<float> _onFontSizeChanged;
+    public GameManager Instance { get; private set; }
 
-    float _currentFontSize;
-    public float CurrentFontSize
+    private void Awake()
     {
-        get => _currentFontSize;
-        set
-        {
-            _currentFontSize = value;
-            _onFontSizeChanged?.Invoke(value);
-        }
+        Instance ??= this;
     }
+
+    [SerializeField] UnityEvent _onStart;
 
     void Start()
     {
         _onStart?.Invoke();
-        CurrentFontSize = _startingFontSize;
     }
 }

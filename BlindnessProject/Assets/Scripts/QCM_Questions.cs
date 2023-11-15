@@ -12,7 +12,7 @@ public struct Answer
 [CreateAssetMenu]
 public class QCM_Questions : ScriptableObject
 {
-    [TextArea(3, 10)] public string _question;
+    [TextArea(3, 10)] public string question;
     [Space] 
-    public List<Answer> _answers;
+    public List<Answer> answers;
 }
